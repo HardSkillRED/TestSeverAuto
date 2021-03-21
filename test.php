@@ -1,8 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php");
+
 if(Bitrix\Main\Loader::includeModule('iblock')){
 
-	$iblockId = 3;
+	$iblockId = 1;
 	$arSelect = ['ID'];
 	$arFilter = ['IBLOCK_ID' => $iblockId];
 	$dbItem = \Bitrix\Iblock\ElementTable::getList([
@@ -19,4 +20,6 @@ if(Bitrix\Main\Loader::includeModule('iblock')){
 	}
 
 }
+
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_after.php");
 ?>
